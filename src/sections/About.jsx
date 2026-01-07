@@ -1,4 +1,4 @@
-import React from 'react'
+import { ABOUT } from "../constants/constants"
 
 function About() {
     return (
@@ -10,8 +10,10 @@ function About() {
                     style={{ WebkitTextStroke: "4px black", color: "transparent" }}
                 > ABOUT ME
                 </h1>
-                <p className='text-black text-center px-50 text-[1rem]'>ผมเป็นนักศึกษาระดับปริญญาตรี จากมหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ ศูนย์สุพรรณบุรี มีความหลงใหลในการออกแบบและพัฒนาเว็บไซต์ โดยเฉพาะในสายงาน Front-End Developer พร้อมให้ความสำคัญกับการสร้างสรรค์ผลงานที่สวยงามและตอบโจทย์ผู้ใช้งานอยู่เสมอ
-                    ด้วยความมุ่งมั่นในการเรียนรู้และพัฒนาทักษะอย่างต่อเนื่อง ผมตั้งเป้าหมายในการเติบโตสู่การเป็น Lead Front-End Developer โดยเน้นการออกแบบซอฟต์แวร์ที่มีคุณภาพ และประสบการณ์ผู้ใช้ที่ดีเยี่ยมควบคู่กันไป</p>
+                <div className='text-black px-50 text-[1rem]'>
+                    <p className="pb-4">{ABOUT[0]}</p>
+                    <p>{ABOUT[1]}</p>
+                </div>
             </div>
         </section>
     )
