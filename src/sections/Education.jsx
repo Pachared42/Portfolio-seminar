@@ -2,7 +2,7 @@ import React from 'react'
 
 function Education() {
     return (
-        <section>
+        <section id="education">
             <div className='bg-white rounded-3xl pt-30 pb-30 relative'>
                 <img className='absolute top-1 left-1/4 -translate-x-1/2 -translate-y-1/2 w-100 -rotate-25' src="parrot.png" alt="parrot" />
                 <img className='absolute top-110 right-0 -translate-x-1/2 w-105 rotate-20' src="w.png" alt="w" />

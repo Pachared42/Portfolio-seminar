@@ -2,7 +2,7 @@ import { ABOUT } from "../constants/constants"
 
 function About() {
     return (
-        <section>
+        <section id="about">
             <div className='bg-white rounded-3xl pt-30 pb-30 relative'>
                 <img className='absolute top-1 left-1/4 -translate-x-1/2 -translate-y-1/2 w-100 -rotate-25' src="5.png" alt="5" />
                 <img className='absolute top-110 right-0 -translate-x-1/2 w-105 rotate-20' src="fox.png" alt="fox" />
