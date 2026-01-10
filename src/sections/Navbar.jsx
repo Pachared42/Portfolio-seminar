@@ -4,7 +4,6 @@ import { NAVTGATION_LINKS } from '../constants/constants';
 import { FaTimes } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
 import { AnimatePresence, motion } from 'motion/react';
-import { li } from 'motion/react-client';
 
 function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,7 +36,7 @@ function Navbar() {
                     <div className='flex items-center justify-center gap-6'>
                         <div>
                             <a href="/">
-                                <img src={logo} alt="Logo" />
+                                <img src={logo} width={100} alt="Logo" />
                             </a>
                         </div>
                         <div>
@@ -54,7 +53,47 @@ function Navbar() {
                     </div>
                 </div>
                 {/* Mobile Navbar */}
-                <div className=''></div>
+                <div className='rounded-lg backdrop-blur-md lg:hidden'>
+                    <div className='flex items-center justify-between mx-5'>
+                        <div>
+                            <a href="/">
+                                <img src={logo} width={100} alt="Logo" />
+                            </a>
+                        </div>
+                        <div>
+                            <button className='focus:outline-none lg:hidden' onClick={toggleMobileMenu}>
+                                {isMobileMenuOpen ? (
+                                    <FaTimes className='text-white' size={30} />
+                                ) : (
+                                    <FaBars className='text-white' size={30} />
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                    <AnimatePresence>
+                        {isMobileMenuOpen && (
+                            <motion.ul
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.2, ease: "easeInOut" }}
+                                className="mx-4 mb-4 flex flex-col gap-4 backdrop-blur-md rounded-md p-4"
+                            >
+                                {NAVIGATION_LINKS.map((item, index) => (
+                                    <li key={index}>
+                                        <a
+                                            href={item.href}
+                                            className="block w-full text-[#ffffff] text-lg hover:text-purple-400 transition-colors"
+                                            onClick={(e) => handleLinkClick(e, item.href)}
+                                        >
+                                            {item.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </motion.ul>
+                        )}
+                    </AnimatePresence>
+                </div>
             </nav>
         </div>
     )
