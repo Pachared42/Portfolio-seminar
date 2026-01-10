@@ -1,5 +1,4 @@
 import './App.css'
-
 import Navbar from './sections/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -12,9 +11,8 @@ import Footer from './sections/Footer';
 function App() {
   return (
     <>
-      <div className="relative">
-        <Navbar />
         <div className='relative z-0 flex flex-col items-center container mx-auto'>
+          <Navbar />
           <Hero />
           <About />
           <Projects />
@@ -23,7 +21,6 @@ function App() {
           <Contact />
           <Footer />
         </div>
-      </div>
     </>
   )
 }
