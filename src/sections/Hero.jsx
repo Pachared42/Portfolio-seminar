@@ -2,11 +2,26 @@ import { HERO } from '../constants/constants'
 
 function Hero() {
     return (
-        <div className="pt-30 pb-60">
-            <h1 className='text-[10rem] font-bold font-stretch-50% text-white text-center'>HI, I'M {HERO.name}</h1>
-            <p className='text-center text-[5rem]' style={{ WebkitTextStroke: "1px white", color: "transparent" }}>{HERO.greet}</p>
-            <img src="a.png" alt="a" className="mx-auto w-100" />
+        <div className="relative pt-30 pb-60 overflow-hidden">
+            <div className="relative z-10">
+                <h1 className="text-[12rem] font-bold leading-none m-0 text-white">
+                    HI, I'M {HERO.name}
+                </h1>
+
+                <h2
+                    className="text-[8rem] font-bold leading-none m-1 -mt-2"
+                    style={{ WebkitTextStroke: "1px white", color: "transparent" }}
+                >
+                    {HERO.greet3}
+                </h2>
+            </div>
+            <img
+                src="unnamed.png"
+                alt="a"
+                className="absolute right-0 top-1/2 -translate-y-1/2 w-150 z-0"
+            />
         </div>
     )
 }
+
 export default Hero
