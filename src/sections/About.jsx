@@ -10,6 +10,8 @@ function About() {
                     style={{ WebkitTextStroke: "4px black", color: "transparent" }}
                 > ABOUT ME
                 </h1>
+                <div className="absolute top-1 right-30 w-100 h-100 bg-orange-300/30 rounded-full blur-3xl" />
+                <div className="absolute bottom-10 left-24 w-70 h-70 bg-orange-300/30 rounded-full blur-3xl" />
                 <div className='text-black px-50 text-[1rem]'>
                     <p className="pb-4">{ABOUT[0]}</p>
                     <p>{ABOUT[1]}</p>
