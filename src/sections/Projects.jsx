@@ -5,7 +5,10 @@ function Projects() {
     const sliderRef = useRef(null)
     const intervalRef = useRef(null)
 
-    // clone head + tail
+    const isDragging = useRef(false)
+    const startX = useRef(0)
+    const startScrollLeft = useRef(0)
+
     const slides = [
         PROJECTS[PROJECTS.length - 1],
         ...PROJECTS,
@@ -17,10 +20,10 @@ function Projects() {
 
         intervalRef.current = setInterval(() => {
             const slider = sliderRef.current
-            if (!slider) return
+            if (!slider || isDragging.current) return
 
-            slider.scrollBy({
-                left: slider.clientWidth,
+            slider.scrollTo({
+                left: slider.scrollLeft + slider.clientWidth,
                 behavior: 'smooth',
             })
         }, 3500)
@@ -36,21 +39,17 @@ function Projects() {
         if (!slider) return
 
         const slideWidth = slider.clientWidth
-
-        // start at first real slide
         slider.scrollLeft = slideWidth
 
         const onScroll = () => {
             if (slider.scrollLeft <= 0) {
-                // jumped to clone before first
-                slider.scrollLeft = slideWidth * projects.length
+                slider.scrollLeft = slideWidth * PROJECTS.length
             }
 
             if (
                 slider.scrollLeft >=
-                slideWidth * (projects.length + 1)
+                slideWidth * (PROJECTS.length + 1)
             ) {
-                // jumped to clone after last
                 slider.scrollLeft = slideWidth
             }
         }
@@ -64,6 +63,42 @@ function Projects() {
         }
     }, [])
 
+    const onMouseDown = (e) => {
+        isDragging.current = true
+        stopAutoPlay()
+        startX.current = e.pageX
+        startScrollLeft.current = sliderRef.current.scrollLeft
+    }
+
+    const onMouseMove = (e) => {
+        if (!isDragging.current) return
+        e.preventDefault()
+
+        const walk = e.pageX - startX.current
+        sliderRef.current.scrollLeft = startScrollLeft.current - walk
+    }
+
+    const snapToClosestSlide = () => {
+        const slider = sliderRef.current
+        const slideWidth = slider.clientWidth
+
+        const index = Math.round(slider.scrollLeft / slideWidth)
+        const target = index * slideWidth
+
+        slider.scrollTo({
+            left: target,
+            behavior: 'smooth',
+        })
+    }
+
+    const onMouseUp = () => {
+        if (!isDragging.current) return
+        isDragging.current = false
+
+        snapToClosestSlide()
+        startAutoPlay()
+    }
+
     return (
         <section id="projects" className="pt-30 pb-30">
             <h1 className="text-[8rem] font-bold text-white text-center mb-20">
@@ -72,22 +107,27 @@ function Projects() {
 
             <div
                 ref={sliderRef}
-                onMouseEnter={stopAutoPlay}
-                onMouseLeave={startAutoPlay}
-                className="flex overflow-x-hidden snap-x snap-mandatory"
+                onMouseDown={onMouseDown}
+                onMouseMove={onMouseMove}
+                onMouseUp={onMouseUp}
+                onMouseLeave={onMouseUp}
+                className="
+                    flex overflow-x-hidden
+                    cursor-grab active:cursor-grabbing
+                    select-none
+                "
             >
                 {slides.map((project, index) => (
                     <div
                         key={`${project.id}-${index}`}
-                        className="min-w-full snap-start px-6"
+                        className="min-w-full px-6"
                     >
-                        <div className="bg-white/5 backdrop-blur-md rounded-3xl p-12">
+                        <div className="p-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="rounded-2xl w-full max-w-md mx-auto"
+                                    className="w-80 rounded-2xl max-w-md mx-auto pointer-events-none"
                                 />
 
                                 <div className="text-white space-y-6">
@@ -95,7 +135,7 @@ function Projects() {
                                         {project.title}
                                     </h2>
 
-                                    <p className="text-white/80">
+                                    <p className="text-white/80 leading-relaxed">
                                         {project.description}
                                     </p>
 
