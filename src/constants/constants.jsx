@@ -1,3 +1,40 @@
+// Skills icons
+import { SiReact } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiVite } from "react-icons/si";
+import { SiPhp } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
+import { SiMui } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
+
+// Tools icons
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { IoLogoGithub } from "react-icons/io5";
+import { SiXampp } from "react-icons/si";
+import { SiMamp } from "react-icons/si";
+import { SiAdobeillustrator } from "react-icons/si";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiWarp } from "react-icons/si";
+import { SiOpenai } from "react-icons/si";
+import { SiGithubcopilot } from "react-icons/si";
+import { SiBruno } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
+import { SiCanva } from "react-icons/si";
+import { SiDocker } from "react-icons/si";
+
+// Database icons
+import { SiMysql } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+
+// Cloud icons
+import { SiRailway } from "react-icons/si";
+import { SiVercel } from "react-icons/si";
+
 export const NAVTGATION_LINKS = [
     { label: "ประวัติ", href: "#about" },
     { label: "ผลงาน", href: "#projects" },
@@ -26,7 +63,7 @@ export const PROJECTS = [
         description:
             'ระบบจัดการสต๊อกสินค้าแบบครบวงจร รองรับการค้นหาและสแกนบาร์โค้ดแบบเรียลไทม์แสดงข้อมูลสินค้า คงเหลือ และประวัติการขายอย่างเป็นระบบออกแบบมาเพื่อเพิ่มความรวดเร็วและลดความผิดพลาดในการจัดการสินค้า',
         image: '/image.Projects/Project1.jpeg',
-        tech: ['React', 'TailwindCSS', 'Golang', 'MySQL', 'JWT'],
+        techStack: ['React', 'TailwindCSS', 'Golang', 'MySQL', 'JWT'],
     },
     {
         id: 2,
@@ -34,7 +71,7 @@ export const PROJECTS = [
         description:
             'แดชบอร์ดสำหรับผู้ดูแลระบบ ใช้แสดงข้อมูลภาพรวมและสถิติสำคัญแบบเรียลไทม์รองรับการกำหนดสิทธิ์ผู้ใช้งานและการยืนยันตัวตนอย่างปลอดภัยออกแบบ UI ให้ใช้งานง่าย รองรับการแสดงผลทุกอุปกรณ์',
         image: '/image.Projects/Project2.jpeg',
-        tech: ['React', 'MUI', 'Golang', 'REST API'],
+        techStack: ['React', 'MUI', 'Golang', 'REST API'],
     },
     {
         id: 3,
@@ -42,7 +79,247 @@ export const PROJECTS = [
         description:
             'แพลตฟอร์มการเรียนรู้ออนไลน์สำหรับจัดการบทเรียนและเนื้อหาแบบดิจิทัลรองรับระบบแบบฝึกหัด การติดตามความก้าวหน้า และสรุปผลการเรียนมุ่งเน้นประสบการณ์ผู้ใช้ที่เรียบง่ายและโต้ตอบได้อย่างลื่นไหล',
         image: '/image.Projects/Project3.jpeg',
-        tech: ['React', 'TailwindCSS', 'Framer Motion'],
+        techStack: ['React', 'TailwindCSS', 'Framer Motion'],
+    },
+];
+
+export const EDUCATION = [
+    {
+        degree: "มัธยมศึกษาตอนปลาย สายทั่วไป",
+        institution: "[ THAMMACHOTESUKSALAI SCHOOL ]",
+        duration: "May 2558 - May 2561",
+        description:
+            "เรียนสายทั่วไป โดยมีความสนใจด้านการออกแบบกราฟิกและเริ่มต้นฝึกฝนพื้นฐานด้านการออกแบบตั้งแต่ช่วงมัธยม",
+    },
+    {
+        degree: "ประกาศนียบัตรวิชาชีพชั้นสูง สาขาคอมพิวเตอร์กราฟิก",
+        institution: "[ Saraburi Vocational College ]",
+        duration: "May 2561 - May 2563",
+        description:
+            "ศึกษาเกี่ยวกับการออกแบบกราฟิกด้วยโปรแกรมคอมพิวเตอร์ ฝึกปฏิบัติจริงทั้งด้านการออกแบบสื่อสิ่งพิมพ์ ดิจิทัลอาร์ต และพื้นฐานการใช้เครื่องมือกราฟิกอย่างมืออาชีพ เพื่อเตรียมความพร้อมสู่สายงานสร้างสรรค์",
+    },
+    {
+        degree: "ปริญญาตรี สาขาเทคโนโลยีสารสนเทศและเศรษฐกิจดิจิทัล",
+        institution:
+            "[ Rajamangala University of Technology Suvarnabhumi, Suphanburi Campus ]",
+        duration: "July 2567 - Present",
+        description:
+            "ศึกษาเกี่ยวกับการพัฒนาเทคโนโลยีสารสนเทศ โดยเน้นด้านการออกแบบและพัฒนาระบบฐานข้อมูล แอปพลิเคชันบนอุปกรณ์พกพา และเว็บแอปพลิเคชัน ได้ฝึกปฏิบัติงานจริงในด้าน Full-stack Development ตั้งแต่การวางโครงสร้างฐานข้อมูล ไปจนถึงการเขียนโปรแกรมและออกแบบส่วนติดต่อผู้ใช้",
+    },
+];
+
+export const SKILLS = [
+    {
+        skill1: (
+            <SiReact className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#61DAFB]" />
+        ),
+        name: "React",
+        experience: "",
+    },
+    // {
+    //   skill2: (
+    //     <SiNextdotjs className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#FFFFFF]" />
+    //   ),
+    //   name: "Next.js",
+    //   experience: "",
+    // },
+    {
+        skill3: (
+            <SiVite className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#646CFF]" />
+        ),
+        name: "Vite",
+        experience: "",
+    },
+    {
+        skill4: (
+            <SiPhp className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#8892BF]" />
+        ),
+        name: "PHP",
+        experience: "",
+    },
+    {
+        skill5: (
+            <RiTailwindCssFill className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#38BDF8]" />
+        ),
+        name: "Tailwind CSS",
+        experience: "",
+    },
+    {
+        skill6: (
+            <FaHtml5 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#E34F26]" />
+        ),
+        name: "HTML",
+        experience: "",
+    },
+    {
+        skill7: (
+            <FaCss3Alt className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#264DE4]" />
+        ),
+        name: "CSS",
+        experience: "",
+    },
+    {
+        skill8: (
+            <SiJavascript className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#F7DF1E]" />
+        ),
+        name: "JavaScript",
+        experience: "",
+    },
+    // {
+    //   skill9: (
+    //     <SiTypescript className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#3178C6]" />
+    //   ),
+    //   name: "Typescript",
+    //   experience: "",
+    // },
+    {
+        skill10: (
+            <FaGolang className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#00ADD8]" />
+        ),
+        name: "GoLang",
+        experience: "",
+    },
+    {
+        skill11: (
+            <SiMui className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#007FFF]" />
+        ),
+        name: "MUI",
+        experience: "",
+    },
+];
+
+export const TOOLS = [
+    {
+        tool1: (
+            <VscVscodeInsiders className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#007ACC]" />
+        ),
+        name: "Visual Studio Code",
+        experience: "",
+    },
+    {
+        tool2: (
+            <IoLogoGithub className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#586069]" />
+        ),
+        name: "GitHub",
+        experience: "",
+    },
+    {
+        tool3: (
+            <SiXampp className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FF7A00]" />
+        ),
+        name: "XAMPP",
+        experience: "",
+    },
+    {
+        tool4: (
+            <SiMamp className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#7D7D7D]" />
+        ),
+        name: "MAMP",
+        experience: "",
+    },
+    {
+        tool5: (
+            <SiAdobeillustrator className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FF9A00]" />
+        ),
+        name: "Adobe Illustrator",
+        experience: "",
+    },
+    {
+        tool6: (
+            <SiAdobephotoshop className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#31A8FF]" />
+        ),
+        name: "Adobe Photoshop",
+        experience: "",
+    },
+    {
+        tool7: (
+            <SiWarp className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FFFFFF]" />
+        ),
+        name: "Warp",
+        experience: "",
+    },
+    {
+        tool8: (
+            <SiOpenai className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FFFFFF]" />
+        ),
+        name: "OpenAI",
+        experience: "",
+    },
+    {
+        tool9: (
+            <SiGithubcopilot className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#4CB0FB]" />
+        ),
+        name: "GitHub Copilot",
+        experience: "",
+    },
+    // {
+    //   tool10: (
+    //     <SiBruno className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#2E3A59]" />
+    //   ),
+    //   name: "SiBruno",
+    //   experience: "",
+    // },
+    {
+        tool11: (
+            <SiPostman className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FF6C37]" />
+        ),
+        name: "SiPostman",
+        experience: "",
+    },
+    {
+        tool12: (
+            <SiCanva className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#01C3CC]" />
+        ),
+        name: "Canva",
+        experience: "",
+    },
+    // {
+    //   tool13: (
+    //     <SiDocker className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#2496ED]" />
+    //   ),
+    //   name: "Docker",
+    //   experience: "",
+    // },
+];
+
+export const DATABASES = [
+    {
+        database1: (
+            <SiMysql className="text-3xl sm:text-5xl md:text-[80px] lg:text-[100px] xl:text-[115px] text-[#4479A1]" />
+        ),
+        name: "MySQL",
+        experience: "",
+    },
+    // {
+    //   database2: (
+    //     <SiMongodb className="text-3xl sm:text-5xl md:text-[80px] lg:text-[100px] xl:text-[115px] text-[#4DB33D]" />
+    //   ),
+    //   name: "MongoDB",
+    //   experience: "",
+    // },
+    // {
+    //   database3: (
+    //     <BiLogoPostgresql className="text-3xl sm:text-5xl md:text-[80px] lg:text-[100px] xl:text-[115px] text-[#336791]" />
+    //   ),
+    //   name: "PostgreSQL",
+    //   experience: "",
+    // },
+];
+
+export const CLOUDS = [
+    {
+        cloud1: (
+            <SiVercel className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FFFFFF]" />
+        ),
+        name: "Vercel",
+        experience: "",
+    },
+    {
+        cloud2: (
+            <SiRailway className="text-3xl sm:text-5xl md:text-[60px] lg:text-[75px] xl:text-[85px] text-[#FFFFFF]" />
+        ),
+        name: "Railway",
+        experience: "",
     },
 ];
 
