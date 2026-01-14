@@ -117,7 +117,7 @@ function Skills() {
                 {/* DATABASES */}
                 <div className="mt-32">
                     <h2 className="text-white text-center text-3xl mb-12">
-                        ระบบฐานข้อมูล
+                        ฐานข้อมูล
                     </h2>
 
                     <div className="
@@ -170,7 +170,7 @@ function Skills() {
                 {/* CLOUDS */}
                 <div className="mt-32">
                     <h2 className="text-white text-center text-3xl mb-12">
-                        ระบบคลาวด์
+                        คลาวด์
                     </h2>
 
                     <div className="
