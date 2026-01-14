@@ -140,12 +140,12 @@ function Projects() {
                                     </p>
 
                                     <div className="flex flex-wrap gap-3">
-                                        {project.tech.map((tech) => (
+                                        {project.techStack.map((techStack) => (
                                             <span
-                                                key={tech}
+                                                key={techStack}
                                                 className="px-4 py-2 rounded-full bg-white/10 text-sm"
                                             >
-                                                {tech}
+                                                {techStack}
                                             </span>
                                         ))}
                                     </div>
