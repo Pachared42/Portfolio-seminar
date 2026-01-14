@@ -22,29 +22,29 @@ export const ABOUT = [
 export const PROJECTS = [
     {
         id: 1,
-        title: 'Inventory Management System',
+        title: 'ระบบจัดการสต๊อกสินค้า',
         description:
-            'ระบบจัดการสต๊อกสินค้าแบบเรียลไทม์ รองรับการสแกนบาร์โค้ด แสดงข้อมูลสินค้า และตัดสต๊อกอัตโนมัติ',
-        image: '/project1.png',
-        tech: ['React', 'Tailwind', 'Go', 'MySQL', 'JWT'],
+            'ระบบจัดการสต๊อกสินค้าแบบครบวงจร รองรับการค้นหาและสแกนบาร์โค้ดแบบเรียลไทม์แสดงข้อมูลสินค้า คงเหลือ และประวัติการขายอย่างเป็นระบบออกแบบมาเพื่อเพิ่มความรวดเร็วและลดความผิดพลาดในการจัดการสินค้า',
+        image: '/image.Projects/Project1.jpeg',
+        tech: ['React', 'TailwindCSS', 'Golang', 'MySQL', 'JWT'],
     },
     {
         id: 2,
-        title: 'Admin Dashboard System',
+        title: 'ระบบแดชบอร์ดผู้ดูแลระบบ',
         description:
-            'Dashboard สำหรับผู้ดูแลระบบ รองรับ Role-based Access, JWT Authentication และ Responsive UI',
-        image: '/project2.png',
-        tech: ['React', 'MUI', 'Go', 'REST API'],
+            'แดชบอร์ดสำหรับผู้ดูแลระบบ ใช้แสดงข้อมูลภาพรวมและสถิติสำคัญแบบเรียลไทม์รองรับการกำหนดสิทธิ์ผู้ใช้งานและการยืนยันตัวตนอย่างปลอดภัยออกแบบ UI ให้ใช้งานง่าย รองรับการแสดงผลทุกอุปกรณ์',
+        image: '/image.Projects/Project2.jpeg',
+        tech: ['React', 'MUI', 'Golang', 'REST API'],
     },
     {
         id: 3,
-        title: 'Online Learning Platform',
+        title: 'แพลตฟอร์มการเรียนรู้ออนไลน์',
         description:
-            'แพลตฟอร์มบทเรียนออนไลน์ มีระบบแบบฝึกหัด เก็บคะแนน และ Interactive UI',
-        image: '/project3.png',
-        tech: ['React', 'Tailwind', 'Framer Motion'],
+            'แพลตฟอร์มการเรียนรู้ออนไลน์สำหรับจัดการบทเรียนและเนื้อหาแบบดิจิทัลรองรับระบบแบบฝึกหัด การติดตามความก้าวหน้า และสรุปผลการเรียนมุ่งเน้นประสบการณ์ผู้ใช้ที่เรียบง่ายและโต้ตอบได้อย่างลื่นไหล',
+        image: '/image.Projects/Project3.jpeg',
+        tech: ['React', 'TailwindCSS', 'Framer Motion'],
     },
-]
+];
 
 export const socialItems = [
     { label: 'Facebook', link: 'https://facebook.com' },
