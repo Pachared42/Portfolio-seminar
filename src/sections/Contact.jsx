@@ -6,7 +6,7 @@ function Contact() {
             <div className='bg-white rounded-3xl pt-30 pb-30 relative'>
                 <img className='absolute top-1 left-1/4 -translate-x-1/2 -translate-y-1/2 w-100 -rotate-25' src="image.decorative/8.png" alt="8" />
                 <img className='absolute top-110 right-0 -translate-x-1/2 w-105 rotate-20' src="image.decorative/donisaur.png" alt="donisaur" />
-                <h1 className="text-[10rem] font-bold text-center"
+                <h1 className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-center"
                     style={{ WebkitTextStroke: "4px black", color: "transparent" }}
                 > CONTACT ME
                 </h1>

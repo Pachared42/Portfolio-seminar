@@ -106,7 +106,7 @@ function Skills() {
       >
         <motion.h1
           variants={fadeUp}
-          className="text-[10rem] font-bold text-white text-center"
+          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-white text-center"
         >
           SKILLS
         </motion.h1>

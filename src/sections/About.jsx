@@ -80,7 +80,7 @@ function About() {
 
         <motion.h1
           variants={fadeUp}
-          className="text-[10rem] font-bold text-center"
+          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-center"
           style={{
             WebkitTextStroke: "4px black",
             color: "transparent",
@@ -98,7 +98,7 @@ function About() {
           className="absolute bottom-10 left-24 w-70 h-70 bg-orange-300/30 rounded-full blur-3xl"
         />
 
-        <div className="text-black px-50 text-[1rem]">
+        <div className="text-black px-4 sm:px-6 md:px-8 lg:px-40 lx:px-50 text-[1rem]">
           <motion.p variants={fadeUp} className="pb-4">
             {ABOUT[0]}
           </motion.p>

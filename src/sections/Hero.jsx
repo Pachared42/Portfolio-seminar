@@ -52,14 +52,14 @@ function Hero() {
       <div className="relative z-10">
         <motion.h1
           variants={textItem}
-          className="text-[12rem] font-bold leading-none m-0 text-white"
+          className="text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[10rem] lx:text-[12rem] font-bold leading-none m-0 text-white"
         >
           HI, I'M {HERO.name}
         </motion.h1>
 
         <motion.h2
           variants={textItem}
-          className="sm:text-[8rem] lg:text-[11rem] font-bold leading-none -mt-2"
+          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold leading-none -mt-2"
           style={{
             WebkitTextStroke: "1px white",
             color: "transparent",
@@ -73,7 +73,7 @@ function Hero() {
         variants={imageItem}
         src="image.decorative/unnamed.png"
         alt="decorative"
-        className="absolute right-0 top-120 -translate-y-1/2 sm:w-150 lg:w-180 z-0"
+        className="absolute right-0 top-105 -translate-y-1/2 w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 z-0"
       />
     </motion.div>
   );

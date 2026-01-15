@@ -93,14 +93,6 @@ function Projects() {
     startAutoPlay();
   };
 
-  const sectionFade = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   const slideFade = {
     hidden: { opacity: 0, scale: 0.96 },
     show: {
@@ -135,7 +127,7 @@ function Projects() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="text-[8rem] font-bold text-white text-center mb-20"
+        className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-white text-center mb-20"
       >
         PROJECT
       </motion.h1>
