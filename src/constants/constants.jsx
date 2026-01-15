@@ -35,7 +35,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiRailway } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
 
-export const NAVTGATION_LINKS = [
+export const NAVIGATION_LINKS = [
     { label: "ประวัติ", href: "#about" },
     { label: "ผลงาน", href: "#projects" },
     { label: "การศึกษา", href: "#education" },

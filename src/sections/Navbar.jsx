@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from "/Pachara.png"
-import { NAVTGATION_LINKS } from '../constants/constants';
+import { NAVIGATION_LINKS } from '../constants/constants';
 import { FaTimes } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
 import { AnimatePresence, motion } from 'motion/react';
@@ -41,7 +41,7 @@ function Navbar() {
                         </div>
                         <div>
                             <ul className='flex items-center gap-4'>
-                                {NAVTGATION_LINKS.map((item, index) => (
+                                {NAVIGATION_LINKS.map((item, index) => (
                                     <li key={index}>
                                         <a href={item.href} onClick={(e) => handleLinkClick(e, item.href)} className="text-white hover:text-stone-300 transition-colors duration-300">
                                             {item.label}
