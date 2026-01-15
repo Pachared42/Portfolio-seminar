@@ -12,7 +12,7 @@ function Skills() {
 
                 {/* SKILLS */}
                 <div className="mt-20">
-                    <h2 className="text-white text-center text-3xl mb-12">
+                    <h2 className="text-white text-3xl mb-12">
                         ทักษะด้านเทคโนโลยี
                     </h2>
 
@@ -64,7 +64,7 @@ function Skills() {
 
                 {/* TOOLS */}
                 <div className="mt-32">
-                    <h2 className="text-white text-center text-3xl mb-12">
+                    <h2 className="text-white text-3xl mb-12">
                         เครื่องมือสำหรับการพัฒนา
                     </h2>
 
@@ -116,7 +116,7 @@ function Skills() {
 
                 {/* DATABASES */}
                 <div className="mt-32">
-                    <h2 className="text-white text-center text-3xl mb-12">
+                    <h2 className="text-white text-3xl mb-12">
                         ฐานข้อมูล
                     </h2>
 
@@ -169,7 +169,7 @@ function Skills() {
 
                 {/* CLOUDS */}
                 <div className="mt-32">
-                    <h2 className="text-white text-center text-3xl mb-12">
+                    <h2 className="text-white text-3xl mb-12">
                         คลาวด์
                     </h2>
 

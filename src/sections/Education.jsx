@@ -8,12 +8,12 @@ function Education() {
 
                 <img
                     className='absolute top-1 left-1/4 -translate-x-1/2 -translate-y-1/2 w-100 -rotate-25'
-                    src="parrot.png"
+                    src="image.decorative/parrot.png"
                     alt="parrot"
                 />
                 <img
                     className='absolute top-230 right-0 -translate-x-1/2 w-120 rotate-20'
-                    src="w.png"
+                    src="image.decorative/w.png"
                     alt="w"
                 />
 

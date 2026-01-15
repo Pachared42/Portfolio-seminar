@@ -16,7 +16,7 @@ function Hero() {
                 </h2>
             </div>
             <img
-                src="unnamed.png"
+                src="image.decorative/unnamed.png"
                 alt="a"
                 className="absolute right-0 top-1/2 -translate-y-1/2 w-150 z-0"
             />
