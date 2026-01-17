@@ -35,6 +35,11 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiRailway } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
 
+// Social media icons
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
 export const NAVIGATION_LINKS = [
     { label: "ประวัติ", href: "#about" },
     { label: "ผลงาน", href: "#projects" },
@@ -263,7 +268,7 @@ export const TOOLS = [
         tool11: (
             <SiPostman className="text-6xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl text-[#FF6C37]" />
         ),
-        name: "SiPostman",
+        name: "Postman",
         experience: "",
     },
     {
@@ -323,8 +328,17 @@ export const CLOUDS = [
     },
 ];
 
-export const socialItems = [
-    { label: 'Facebook', link: 'https://facebook.com' },
-    { label: 'GitHub', link: 'https://github.com' },
-    { label: 'Instagram', link: 'https://instagram.com' }
+export const SOCIAL_MEDIA_LINKS = [
+    {
+        href: "https://www.facebook.com/pacharaaaaaaa",
+        icon: <FaFacebook fontSize={50} className="hover:opacity-80" />,
+    },
+    {
+        href: "https://www.instagram.com/axm.pcr/",
+        icon: <FaInstagram fontSize={50} className="hover:opacity-80" />,
+    },
+    {
+        href: "https://github.com/Pachared42",
+        icon: <FaGithub fontSize={50} className="hover:opacity-80" />,
+    },
 ];
