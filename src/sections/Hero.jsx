@@ -47,12 +47,12 @@ function Hero() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="relative pt-30 pb-60 lg:pb-80 overflow-hidden"
+      className="relative pt-30 pb-60 lg:pt-40 lg:pb-80 overflow-hidden"
     >
       <div className="relative z-10">
         <motion.h1
           variants={textItem}
-          className="text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[10rem] lx:text-[12rem] font-bold leading-none m-0 text-white"
+          className="text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[12rem] lx:text-[12rem] font-bold leading-none m-0 text-white"
         >
           HI, I'M {HERO.name}
         </motion.h1>
@@ -73,7 +73,7 @@ function Hero() {
         variants={imageItem}
         src="image.decorative/unnamed.png"
         alt="decorative"
-        className="absolute right-0 top-105 -translate-y-1/2 w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 z-0"
+        className="absolute right-0 top-105 lg:top-125 -translate-y-1/2 w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 z-0"
       />
     </motion.div>
   );
