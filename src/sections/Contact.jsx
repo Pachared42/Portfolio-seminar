@@ -17,8 +17,7 @@ function Contact() {
                 />
 
                 <h1
-                    className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-center"
-                    style={{ WebkitTextStroke: "4px black", color: "transparent" }}
+                    className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-center text-transparent [-webkit-text-stroke:1.5px_black] md:[-webkit-text-stroke:3px_black] sm:[-webkit-text-stroke:0.5px_black]"
                 >
                     CONTACT ME
                 </h1>
