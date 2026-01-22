@@ -13,34 +13,21 @@ function About() {
   };
 
   const fadeUp = {
-    hidden: {
-      opacity: 0,
-      y: 60,
-    },
+    hidden: { opacity: 0, y: 50 },
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
   const imageItem = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-      rotate: -10,
-    },
+    hidden: { opacity: 0, y: 40, rotate: -10 },
     show: {
       opacity: 1,
       y: 0,
       rotate: 0,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
-      },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
@@ -48,57 +35,108 @@ function About() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        duration: 1.2,
-        ease: "easeOut",
-      },
+      transition: { duration: 1.2, ease: "easeOut" },
     },
   };
 
   return (
-    <section id="about">
+    <section id="about" className="relative">
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-120px" }}
-        className="bg-white rounded-3xl pt-30 pb-30 relative"
+        className="
+          relative
+          bg-white rounded-3xl
+          pt-20 pb-24
+          sm:pt-24 sm:pb-28
+          lg:pt-32 lg:pb-36
+        "
       >
+        {/* Decorative Images */}
         <motion.img
           variants={imageItem}
-          className="absolute top-1 left-1/4 -translate-x-1/2 -translate-y-1/2 w-100 -rotate-25"
           src="image.decorative/5.png"
           alt="5"
+          className="
+            absolute top-0 left-[20%]
+            -translate-x-1/2 -translate-y-1/2
+            w-[16rem] sm:w-[20rem] lg:w-[24rem]
+            -rotate-12
+            opacity-40 sm:opacity-70
+            pointer-events-none
+          "
         />
 
         <motion.img
           variants={imageItem}
-          className="absolute top-110 right-0 -translate-x-1/2 w-105 rotate-20"
           src="image.decorative/fox.png"
           alt="fox"
+          className="
+            absolute top-[65%] right-[-10%] lg:right-0
+            w-[18rem] sm:w-88 lg:w-104
+            rotate-12
+            opacity-40 sm:opacity-70
+            pointer-events-none
+          "
         />
 
+        {/* Title */}
         <motion.h1
           variants={fadeUp}
-          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-center text-transparent [-webkit-text-stroke:1.5px_black] md:[-webkit-text-stroke:3px_black] sm:[-webkit-text-stroke:0.5px_black]"
+          className="
+            text-center font-bold leading-none
+            text-transparent
+            text-[clamp(3rem,9vw,11rem)]
+            [-webkit-text-stroke:clamp(1px,0.2vw,3px)_black]
+          "
         >
           ABOUT ME
         </motion.h1>
 
+        {/* Glow Effects */}
         <motion.div
           variants={glowItem}
-          className="absolute top-1 right-30 w-100 h-100 bg-orange-300/30 rounded-full blur-3xl"
-        />
-        <motion.div
-          variants={glowItem}
-          className="absolute bottom-10 left-24 w-70 h-70 bg-orange-300/30 rounded-full blur-3xl"
+          className="
+            absolute top-10 right-[15%]
+            w-[18rem] h-72
+            bg-orange-300/30
+            rounded-full blur-3xl
+            pointer-events-none
+          "
         />
 
-        <div className="text-black px-4 sm:px-6 md:px-8 lg:px-40 lx:px-50 text-[1rem]">
-          <motion.p variants={fadeUp} className="pb-4">
+        <motion.div
+          variants={glowItem}
+          className="
+            absolute bottom-10 left-[10%]
+            w-56 h-56
+            bg-orange-300/30
+            rounded-full blur-3xl
+            pointer-events-none
+          "
+        />
+
+        {/* Content */}
+        <div
+          className="
+            relative z-10
+            text-black
+            mx-auto
+            mt-10
+            px-4 sm:px-8 lg:px-24 xl:px-40
+            max-w-5xl
+            text-[clamp(1rem,1.2vw,1.125rem)]
+            leading-relaxed
+          "
+        >
+          <motion.p variants={fadeUp} className="mb-4">
             {ABOUT[0]}
           </motion.p>
-          <motion.p variants={fadeUp}>{ABOUT[1]}</motion.p>
+          <motion.p variants={fadeUp}>
+            {ABOUT[1]}
+          </motion.p>
         </div>
       </motion.div>
     </section>
