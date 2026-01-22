@@ -7,8 +7,8 @@ function Education() {
     hidden: {},
     show: {
       transition: {
-        delayChildren: 0.4,
-        staggerChildren: 0.25,
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -18,10 +18,7 @@ function Education() {
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -31,10 +28,7 @@ function Education() {
       opacity: 1,
       y: 0,
       rotate: 0,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
-      },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
@@ -47,57 +41,124 @@ function Education() {
   };
 
   return (
-    <section id="education">
+    <section id="education" className="relative">
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.35 }}
-        className="bg-white rounded-3xl pt-30 pb-30 relative"
+        className="
+          relative 
+          bg-white rounded-3xl
+          pt-20 pb-24
+          sm:pt-24 sm:pb-28
+          lg:pt-32 lg:pb-36
+        "
       >
+        {/* Decorative Images */}
         <motion.img
           variants={imageFloat}
-          className="absolute top-1 left-1/4 -translate-x-1/2 -translate-y-1/2 w-100 -rotate-25"
           src="image.decorative/parrot.png"
           alt="parrot"
+          className="
+            absolute top-0 left-[20%]
+            -translate-x-1/2 -translate-y-1/2
+            w-[16rem] sm:w-[20rem] lg:w-[24rem]
+            -rotate-12
+            opacity-40 sm:opacity-70
+            pointer-events-none
+          "
         />
 
         <motion.img
           variants={imageFloat}
-          className="absolute top-230 right-0 -translate-x-1/2 w-120 rotate-20"
           src="image.decorative/w.png"
           alt="w"
+          className="
+            absolute top-[70%] right-[-10%] lg:right-0
+            w-[18rem] sm:w-88 lg:w-104
+            rotate-12
+            opacity-40 sm:opacity-70
+            pointer-events-none
+          "
         />
 
+        {/* Title */}
         <motion.h1
           variants={fadeUp}
-          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-center text-transparent [-webkit-text-stroke:1.5px_black] md:[-webkit-text-stroke:3px_black] sm:[-webkit-text-stroke:0.5px_black]"
+          className="
+            text-center font-bold leading-none
+            text-transparent
+            text-[clamp(3rem,9vw,11rem)]
+            [-webkit-text-stroke:clamp(1px,0.2vw,3px)_black]
+          "
         >
           EDUCATION
         </motion.h1>
 
+        {/* Glow Effects */}
         <motion.div
           variants={glowFade}
-          className="absolute top-20 right-30 w-80 h-80 bg-green-300/30 rounded-full blur-3xl"
-        />
-        <motion.div
-          variants={glowFade}
-          className="absolute bottom-24 left-24 w-120 h-120 bg-green-300/30 rounded-full blur-3xl"
+          className="
+            absolute top-16 right-[15%]
+            w-[18rem] h-72
+            bg-green-300/30
+            rounded-full blur-3xl
+            pointer-events-none
+          "
         />
 
         <motion.div
+          variants={glowFade}
+          className="
+            absolute bottom-16 left-[10%]
+            w-[20rem] h-80
+            bg-green-300/30
+            rounded-full blur-3xl
+            pointer-events-none
+          "
+        />
+
+        {/* Content */}
+        <motion.div
           variants={container}
-          className="mt-20 px-50 space-y-14 text-black"
+          className="
+            relative z-10
+            mx-auto
+            mt-12 sm:mt-16
+            px-4 sm:px-8 lg:px-24 xl:px-40
+            max-w-5xl
+            space-y-14
+            text-black
+          "
         >
           {EDUCATION.map((item, index) => (
             <motion.div key={index} variants={fadeUp}>
-              <h3 className="text-2xl font-bold">{item.degree}</h3>
+              <h3
+                className="
+                  font-bold
+                  text-[clamp(1.25rem,2.5vw,1.75rem)]
+                "
+              >
+                {item.degree}
+              </h3>
 
-              <p className="text-gray-700 mt-1">{item.institution}</p>
+              <p className="text-gray-700 mt-1">
+                {item.institution}
+              </p>
 
-              <p className="text-sm text-gray-500 mt-1">{item.duration}</p>
+              <p className="text-sm text-gray-500 mt-1">
+                {item.duration}
+              </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
+              <p
+                className="
+                  mt-4
+                  text-gray-600
+                  leading-relaxed
+                  text-[clamp(0.95rem,1.2vw,1.125rem)]
+                "
+              >
                 {item.description}
               </p>
             </motion.div>
