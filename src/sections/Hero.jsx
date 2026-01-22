@@ -15,7 +15,7 @@ function Hero() {
   const textItem = {
     hidden: {
       opacity: 0,
-      y: 80,
+      y: 60,
     },
     show: {
       opacity: 1,
@@ -30,7 +30,7 @@ function Hero() {
   const imageItem = {
     hidden: {
       opacity: 0,
-      x: 200,
+      x: 120,
     },
     show: {
       opacity: 1,
@@ -43,39 +43,57 @@ function Hero() {
   };
 
   return (
-    <motion.div
+    <motion.section
       variants={container}
       initial="hidden"
       animate="show"
-      className="relative pt-30 pb-60 lg:pt-40 lg:pb-80 overflow-hidden"
+      className="
+        relative overflow-hidden
+        pt-20 pb-40
+        sm:pt-28 sm:pb-48
+        lg:pt-40 lg:pb-80
+      "
     >
+      {/* Text */}
       <div className="relative z-10">
         <motion.h1
           variants={textItem}
-          className="text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[12rem] lx:text-[12rem] font-bold leading-none m-0 text-white"
+          className="
+            font-bold leading-none text-white m-0
+            text-[clamp(3.5rem,10vw,12rem)]
+          "
         >
-          HI, I'M {HERO.name}
+          HI, I&apos;M {HERO.name}
         </motion.h1>
 
         <motion.h2
           variants={textItem}
-          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold leading-none -mt-2"
-          style={{
-            WebkitTextStroke: "1px white",
-            color: "transparent",
-          }}
+          className="
+            font-bold leading-none -mt-2
+            text-transparent
+            text-[clamp(3rem,9vw,11rem)]
+            [-webkit-text-stroke:clamp(1px,0.15vw,3px)_white]
+          "
         >
           {HERO.greet4}
         </motion.h2>
       </div>
 
+      {/* Decorative Image */}
       <motion.img
         variants={imageItem}
         src="image.decorative/unnamed.png"
         alt="decorative"
-        className="absolute right-0 top-105 lg:top-125 -translate-y-1/2 w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 z-0"
+        className="
+          absolute top-1/2 -translate-y-1/2
+          right-[-15%] sm:right-[-10%] lg:right-0
+          w-[18rem] sm:w-[24rem] md:w-120 lg:w-xl xl:w-2xl
+          opacity-40 sm:opacity-70
+          pointer-events-none
+          z-0
+        "
       />
-    </motion.div>
+    </motion.section>
   );
 }
 
