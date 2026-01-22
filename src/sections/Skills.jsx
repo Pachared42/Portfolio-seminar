@@ -7,8 +7,8 @@ function Skills() {
     hidden: {},
     show: {
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.25,
+        delayChildren: 0.25,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -18,19 +18,14 @@ function Skills() {
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
   const gridContainer = {
     hidden: {},
     show: {
-      transition: {
-        staggerChildren: 0.12,
-      },
+      transition: { staggerChildren: 0.12 },
     },
   };
 
@@ -39,10 +34,7 @@ function Skills() {
     show: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -55,8 +47,8 @@ function Skills() {
         sm:grid-cols-3
         md:grid-cols-4
         lg:grid-cols-6
-        gap-10
-        place-items-start
+        gap-x-8 gap-y-12
+        place-items-center
       "
     >
       {data.map((item, index) => (
@@ -64,26 +56,31 @@ function Skills() {
           key={index}
           variants={iconItem}
           className="
-            group
-            relative
+            group relative
             flex flex-col items-center
-            transition-all duration-300 ease-out
+            transition-transform duration-300 ease-out
             hover:-translate-y-2 hover:scale-110
           "
         >
-          <div className="w-24 h-24 flex items-center justify-center">
+          <div
+            className="
+              flex items-center justify-center
+              w-[clamp(4.5rem,10vw,6rem)]
+              h-[clamp(4.5rem,10vw,6rem)]
+            "
+          >
             {Object.values(item).find((val) => typeof val === "object")}
           </div>
 
+          {/* Tooltip */}
           <div
             className="
               pointer-events-none
-              absolute
-              -bottom-7
-              opacity-0
-              group-hover:opacity-100
+              absolute -bottom-8
+              opacity-0 group-hover:opacity-100
               transition-opacity duration-200
-              bg-white text-black text-xs
+              bg-white text-black
+              text-xs
               px-3 py-1 rounded-full
               whitespace-nowrap
             "
@@ -96,44 +93,86 @@ function Skills() {
   );
 
   return (
-    <section id="skills">
+    <section
+      id="skills"
+      className="
+        relative overflow-hidden
+        pt-20 pb-28
+        sm:pt-28 sm:pb-36
+        lg:pt-36 lg:pb-44
+      "
+    >
       <motion.div
         variants={sectionContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.35 }}
-        className="pt-30 pb-60"
+        className="mx-auto max-w-7xl px-4 sm:px-8"
       >
+        {/* Title */}
         <motion.h1
           variants={fadeUp}
-          className="text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[9rem] lx:text-[11rem] font-bold text-white text-center"
+          className="
+            text-center font-bold text-white
+            text-[clamp(3rem,9vw,11rem)]
+          "
         >
           SKILLS
         </motion.h1>
 
         {/* Skills */}
-        <motion.div variants={fadeUp} className="mt-20">
-          <h2 className="text-white text-3xl mb-12">ทักษะด้านเทคโนโลยี</h2>
+        <motion.div variants={fadeUp} className="mt-16 sm:mt-20">
+          <h2
+            className="
+              text-white font-semibold
+              mb-10
+              text-[clamp(1.5rem,3vw,1.875rem)]
+            "
+          >
+            ทักษะด้านเทคโนโลยี
+          </h2>
           {renderGrid(SKILLS)}
         </motion.div>
 
         {/* Tools */}
-        <motion.div variants={fadeUp} className="mt-32">
-          <h2 className="text-white text-3xl mb-12">
+        <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
+          <h2
+            className="
+              text-white font-semibold
+              mb-10
+              text-[clamp(1.5rem,3vw,1.875rem)]
+            "
+          >
             เครื่องมือสำหรับการพัฒนา
           </h2>
           {renderGrid(TOOLS)}
         </motion.div>
 
-        {/* Database */}
-        <motion.div variants={fadeUp} className="mt-32">
-          <h2 className="text-white text-3xl mb-12">ฐานข้อมูล</h2>
+        {/* Databases */}
+        <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
+          <h2
+            className="
+              text-white font-semibold
+              mb-10
+              text-[clamp(1.5rem,3vw,1.875rem)]
+            "
+          >
+            ฐานข้อมูล
+          </h2>
           {renderGrid(DATABASES)}
         </motion.div>
 
-        {/* Cloud */}
-        <motion.div variants={fadeUp} className="mt-32">
-          <h2 className="text-white text-3xl mb-12">คลาวด์</h2>
+        {/* Clouds */}
+        <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
+          <h2
+            className="
+              text-white font-semibold
+              mb-10
+              text-[clamp(1.5rem,3vw,1.875rem)]
+            "
+          >
+            คลาวด์
+          </h2>
           {renderGrid(CLOUDS)}
         </motion.div>
       </motion.div>
