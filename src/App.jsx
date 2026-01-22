@@ -14,37 +14,37 @@ import Footer from "./sections/Footer";
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2.0,
+      duration: 2,
       easing: (t) => 1 - Math.pow(1 - t, 4),
       smoothWheel: true,
       smoothTouch: false,
     });
 
-    function raf(time) {
+    const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    }
+    };
 
     requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy();
-    };
+    return () => lenis.destroy();
   }, []);
 
   return (
-    <>
-      <div className="relative z-0 flex flex-col items-center container mx-auto">
-        <Navbar />
+    <div className="relative min-h-screen overflow-hidden">
+      <Navbar />
+
+      <main className="flex flex-col">
         <Hero />
         <About />
         <Projects />
         <Education />
         <Skills />
         <Contact />
-        <Footer />
-      </div>
-    </>
+      </main>
+
+      <Footer />
+    </div>
   );
 }
 
