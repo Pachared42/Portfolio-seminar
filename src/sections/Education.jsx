@@ -61,10 +61,10 @@ function Education() {
           src="image.decorative/parrot.png"
           alt="parrot"
           className="
-            absolute top-0 left-[20%]
+            absolute top-0 left-[30%] lg:left-[15%]
             -translate-x-1/2 -translate-y-1/2
             w-[16rem] sm:w-[20rem] lg:w-[24rem]
-            -rotate-12
+            -rotate-22
             opacity-40 sm:opacity-70
             pointer-events-none
           "
@@ -75,7 +75,7 @@ function Education() {
           src="image.decorative/w.png"
           alt="w"
           className="
-            absolute top-[70%] right-[-10%] lg:right-0
+            absolute top-[85%] right-[-5%] lg:right-0
             w-[18rem] sm:w-88 lg:w-104
             rotate-12
             opacity-40 sm:opacity-70
