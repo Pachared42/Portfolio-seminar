@@ -60,7 +60,7 @@ function Hero() {
           variants={textItem}
           className="
             font-bold leading-none text-white m-0
-            text-[clamp(3.5rem,10vw,12rem)]
+            text-[clamp(3.5rem,10vw,15rem)]
           "
         >
           HI, I&apos;M {HERO.name}
