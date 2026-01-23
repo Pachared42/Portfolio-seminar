@@ -34,7 +34,7 @@ function App() {
     <div className="relative min-h-screen overflow-hidden">
       <Navbar />
 
-      <main className="flex flex-col">
+      <main className="flex flex-col p-5 lg:p-10">
         <Hero />
         <About />
         <Projects />
