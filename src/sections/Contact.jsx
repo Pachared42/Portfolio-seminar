@@ -1,39 +1,95 @@
 import React from "react";
 import { SOCIAL_MEDIA_LINKS } from "../constants/constants";
+import { motion } from "framer-motion";
+import { transition } from "three/examples/jsm/tsl/display/TransitionNode.js";
 
 function Contact() {
-    return (
-        <section id="contact" className="px-4 md:px-10">
-            <div className="relative bg-white rounded-3xl pt-24 pb-24">
+    const sectionVariants = {
+        hidden: { opacity: 0, y: 60 },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+                when: "beforeChildren",
+                staggerChildren: 0.15,
+            },
+        },
+    };
 
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+
+    const iconVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        show: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 0.4, ease: "easeOut" },
+        },
+    };
+
+    const imageFloat = {
+        hidden: { opacity: 0, y: 60, rotate: -10 },
+        show: {
+            opacity: 1,
+            y: 0,
+            rotate: 0,
+            transition: { duration: 1, ease: "easeOut" },
+        },
+    };
+
+    const glowFade = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: { duration: 1.2, ease: "easeOut" },
+        },
+    }
+
+    return (
+        <section id="contact" className="relative">
+            <motion.div
+                variants={sectionVariants}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                className="relative bg-white rounded-3xl pt-24 pb-24"
+            >
                 {/* Decorative Images */}
-                <img
+                <motion.img
                     src="image.decorative/8.png"
                     alt="8"
+                    variants={imageFloat}
                     className="
-            absolute
-            top-0 left-1/2
+            absolute top-0 left-20 lg:left-40
             -translate-x-1/2 -translate-y-1/2
             w-55 md:w-[320px] lg:w-100
-            -rotate-25
-            pointer-events-none
+            -rotate-25 pointer-events-none
           "
                 />
 
-                <img
+                <motion.img
                     src="image.decorative/donisaur.png"
                     alt="donisaur"
+                    variants={imageFloat}
                     className="
-            absolute
-            top-104 -right-16
-            w-65 md:w-90 lg:w-105
-            rotate-12
-            pointer-events-none
+            absolute top-85 -right-5
+            w-60 md:w-80 lg:w-100
+            rotate-12 pointer-events-none
           "
                 />
 
                 {/* Title */}
-                <h1
+                <motion.h1
+                    variants={fadeUp}
                     className="
             text-center font-bold text-transparent
             text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem]
@@ -44,41 +100,70 @@ function Contact() {
           "
                 >
                     CONTACT ME
-                </h1>
+                </motion.h1>
+
+                <motion.div
+                    variants={glowFade}
+                    className="
+                            absolute top-16 right-[15%]
+                            w-[18rem] h-72
+                            bg-purple-300/30
+                            rounded-full blur-3xl
+                            pointer-events-none
+                          "
+                />
+
+                <motion.div
+                    variants={glowFade}
+                    className="
+                            absolute bottom-16 left-[10%]
+                            w-[20rem] h-80
+                            bg-green-300/30
+                            rounded-full blur-3xl
+                            pointer-events-none
+                          "
+                />
 
                 {/* Description */}
-                <p className="
-          mx-auto mt-6
-          max-w-3xl
-          text-center text-black
-          text-sm sm:text-base
-          px-4 sm:px-8
-        ">
+                <motion.p
+                    variants={fadeUp}
+                    className="
+            mx-auto mt-6 max-w-3xl
+            text-center text-black
+            text-sm sm:text-base
+            px-4 sm:px-8
+          "
+                >
                     หากคุณสนใจร่วมงาน มีคำถามเพิ่มเติม หรืออยากพูดคุยเกี่ยวกับโปรเจกต์ต่างๆ
                     สามารถติดต่อผมได้ผ่านช่องทางโซเชียลมีเดียด้านล่างนี้
                     ผมยินดีรับฟังและตอบกลับทุกการติดต่อ
-                </p>
+                </motion.p>
 
                 {/* Social Icons */}
-                <div className="mt-10 flex justify-center gap-8">
+                <motion.div
+                    variants={fadeUp}
+                    className="mt-10 flex justify-center gap-8"
+                >
                     {SOCIAL_MEDIA_LINKS.map((item, index) => (
-                        <a
+                        <motion.a
                             key={index}
                             href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
+                            variants={iconVariants}
+                            whileHover={{ scale: 1.2, y: -4 }}
+                            whileTap={{ scale: 0.95 }}
                             className="
                 text-3xl sm:text-4xl
-                text-black
-                hover:text-gray-600
+                text-black hover:text-gray-600
                 transition-colors duration-300
               "
                         >
                             {item.icon}
-                        </a>
+                        </motion.a>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 }
