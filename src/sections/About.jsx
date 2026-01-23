@@ -60,10 +60,10 @@ function About() {
           src="image.decorative/5.png"
           alt="5"
           className="
-            absolute top-0 left-[20%]
+            absolute top-0 left-[20%] lg:left-[10%]
             -translate-x-1/2 -translate-y-1/2
-            w-[16rem] sm:w-[20rem] lg:w-[24rem]
-            -rotate-12
+            w-[20rem] sm:w-90 lg:w-106
+            -rotate-20
             opacity-40 sm:opacity-70
             pointer-events-none
           "
@@ -74,7 +74,7 @@ function About() {
           src="image.decorative/fox.png"
           alt="fox"
           className="
-            absolute top-[65%] right-[-10%] lg:right-0
+            absolute top-[80%] right-[-10%] lg:right-0
             w-[18rem] sm:w-88 lg:w-104
             rotate-12
             opacity-40 sm:opacity-70
