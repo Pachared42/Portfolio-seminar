@@ -39,6 +39,7 @@ import { SiVercel } from "react-icons/si";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { th } from "motion/react-client";
 
 export const NAVIGATION_LINKS = [
     { label: "ประวัติ", href: "#about" },
@@ -87,6 +88,51 @@ export const PROJECTS = [
         techStack: ['React', 'TailwindCSS', 'Framer Motion'],
     },
 ];
+
+export const IMAGE_SHOWCASE = {
+    title: "ผลงานการออกแบบกราฟิก",
+    items: [
+        {
+            image: "/image.Projects/Project1.jpeg",
+            title: "โปสเตอร์งานเทศกาลดนตรี",
+            description: "ออกแบบโปสเตอร์สำหรับโปรโมตงานเทศกาลดนตรีท้องถิ่น",
+        },
+        {
+            image: "/image.Projects/Project2.jpeg",
+            title: "โลโก้แบรนด์เครื่องสำอาง",
+            description: "สร้างสรรค์โลโก้ที่สะท้อนความงามและความเป็นเอกลักษณ์ของแบรนด์",
+        },
+        {
+            image: "/image.Projects/Project3.jpeg",
+            title: "แบนเนอร์โฆษณาออนไลน์",
+            description: "ออกแบบแบนเนอร์สำหรับแคมเปญโฆษณาบนโซเชียลมีเดีย",
+        },
+    ],
+};
+
+export const VIDEO_SHOWCASE = {
+    title: "ผลงานวิดีโอโปรโมชัน",
+    items: [
+        {
+            thumbnail: "/image.Projects/Project1.jpeg",
+            link: "https://www.youtube.com/watch?v=PeF28qjw10Q&t=4s",
+            title: "วิดีโอแนะนำบริการ",
+            description: "รวบรวมความคิดเห็นและรีวิวจากลูกค้าเพื่อนำเสนอความน่าเชื่อถือ",
+        },
+        {
+            thumbnail: "/image.Projects/Project2.jpeg",
+            link: "https://www.youtube.com/watch?v=yyyyy",
+            title: "วิดีโอแนะนำบริการ",
+            description: "ผลิตวิดีโอที่อธิบายและแสดงถึงประโยชน์ของบริการต่างๆ",
+        },
+        {
+            thumbnail: "/image.Projects/Project3.jpeg",
+            link: "https://www.youtube.com/watch?v=zzzzz",
+            title: "วิดีโอรีวิวลูกค้า",
+            description: "รวบรวมความคิดเห็นและรีวิวจากลูกค้าเพื่อนำเสนอความน่าเชื่อถือ",
+        },
+    ],
+};
 
 export const EDUCATION = [
     {
