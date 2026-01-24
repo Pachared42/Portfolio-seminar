@@ -1,29 +1,24 @@
 import React from "react";
 import { SOCIAL_MEDIA_LINKS } from "../constants/constants";
-import { motion } from "framer-motion";
-import { transition } from "three/examples/jsm/tsl/display/TransitionNode.js";
+import { delay, motion } from "framer-motion";
 
 function Contact() {
-    const sectionVariants = {
-        hidden: { opacity: 0, y: 60 },
+    const sectionContainer = {
+        hidden: {},
         show: {
-            opacity: 1,
-            y: 0,
             transition: {
-                duration: 0.8,
-                ease: "easeOut",
-                when: "beforeChildren",
-                staggerChildren: 0.15,
+                delayChildren: 0.15,
+                staggerChildren: 0.12,
             },
         },
     };
 
     const fadeUp = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 26 },
         show: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
+            transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
         },
     };
 
@@ -37,12 +32,12 @@ function Contact() {
     };
 
     const imageFloat = {
-        hidden: { opacity: 0, y: 60, rotate: -10 },
+        hidden: { opacity: 0, y: 40, rotate: -8 },
         show: {
             opacity: 1,
             y: 0,
             rotate: 0,
-            transition: { duration: 1, ease: "easeOut" },
+            transition: { duration: 1, ease: [0.22, 1, 0.36, 1] },
         },
     };
 
@@ -50,17 +45,17 @@ function Contact() {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
-            transition: { duration: 1.2, ease: "easeOut" },
+            transition: { duration: 0.9, ease: "easeOut" },
         },
     }
 
     return (
         <section id="contact" className="relative">
             <motion.div
-                variants={sectionVariants}
+                variants={sectionContainer}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.4 }}
                 className="relative bg-white rounded-3xl pt-24 pb-24"
             >
                 {/* Decorative Images */}

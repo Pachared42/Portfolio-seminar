@@ -1,51 +1,52 @@
 import { ABOUT } from "../constants/constants";
-import { motion } from "framer-motion";
+import { motion, scale } from "framer-motion";
 
 function About() {
-  const container = {
+  const sectionContainer = {
     hidden: {},
     show: {
       transition: {
-        delayChildren: 0.25,
-        staggerChildren: 0.2,
+        delayChildren: 0.15,
+        staggerChildren: 0.12,
       },
     },
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 32 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
   const imageItem = {
-    hidden: { opacity: 0, y: 40, rotate: -10 },
+    hidden: { opacity: 0, y: 24, rotate: -6 },
     show: {
       opacity: 1,
       y: 0,
       rotate: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
   const glowItem = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.9 },
     show: {
       opacity: 1,
-      transition: { duration: 1.2, ease: "easeOut" },
+      scale: 1,
+      transition: { duration: 0.9, ease: "easeOut" },
     },
   };
 
   return (
     <section id="about" className="relative">
       <motion.div
-        variants={container}
+        variants={sectionContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-120px" }}
+        viewport={{ once: true, amount: 0.3 }}
         className="
           relative
           bg-white rounded-3xl

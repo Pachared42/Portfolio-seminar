@@ -92,25 +92,25 @@ function Projects() {
 
   /* animations */
   const slideFade = {
-    hidden: { opacity: 0, scale: 0.96 },
+    hidden: { opacity: 0, scale: 0.97 },
     show: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
   const contentStagger = {
     hidden: {},
-    show: { transition: { staggerChildren: 0.15 } },
+    show: { transition: { staggerChildren: 0.1 } },
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 28 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
     },
   };
 

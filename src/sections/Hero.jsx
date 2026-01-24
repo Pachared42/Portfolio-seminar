@@ -2,7 +2,7 @@ import { HERO } from "../constants/constants";
 import { motion } from "framer-motion";
 
 function Hero() {
-  const container = {
+  const sectionContainer = {
     hidden: {},
     show: {
       transition: {
@@ -44,7 +44,7 @@ function Hero() {
 
   return (
     <motion.section
-      variants={container}
+      variants={sectionContainer}
       initial="hidden"
       animate="show"
       className="
@@ -58,23 +58,12 @@ function Hero() {
       <div className="relative z-10">
         <motion.h1
           variants={textItem}
-          className="
-            font-bold leading-none text-white m-0
-            text-[clamp(3.5rem,10vw,15rem)]
-          "
-        >
+          className=" font-bold leading-none text-white m-0 text-[clamp(3.5rem,10vw,15rem)] " >
           HI, I&apos;M {HERO.name}
         </motion.h1>
-
         <motion.h2
           variants={textItem}
-          className="
-            font-bold leading-none -mt-2
-            text-transparent
-            text-[clamp(3rem,9vw,11rem)]
-            [-webkit-text-stroke:clamp(1px,0.15vw,3px)_white]
-          "
-        >
+          className=" font-bold leading-none -mt-2 text-transparent text-[clamp(3rem,9vw,11rem)] [-webkit-text-stroke:clamp(1px,0.15vw,3px)_white] " >
           {HERO.greet4}
         </motion.h2>
       </div>

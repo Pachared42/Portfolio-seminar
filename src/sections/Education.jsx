@@ -3,32 +3,32 @@ import { EDUCATION } from "../constants/constants";
 import { motion } from "framer-motion";
 
 function Education() {
-  const container = {
+  const sectionContainer = {
     hidden: {},
     show: {
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
+        delayChildren: 0.15,
+        staggerChildren: 0.12,
       },
     },
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 26 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
   const imageFloat = {
-    hidden: { opacity: 0, y: 60, rotate: -10 },
+    hidden: { opacity: 0, y: 40, rotate: -8 },
     show: {
       opacity: 1,
       y: 0,
       rotate: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 1, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
@@ -36,17 +36,17 @@ function Education() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { duration: 1.2, ease: "easeOut" },
+      transition: { duration: 0.9, ease: "easeOut" },
     },
   };
 
   return (
     <section id="education" className="relative">
       <motion.div
-        variants={container}
+        variants={sectionContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.35 }}
+        viewport={{ once: true, amount: 0.4 }}
         className="
           relative 
           bg-white rounded-3xl
@@ -121,7 +121,7 @@ function Education() {
 
         {/* Content */}
         <motion.div
-          variants={container}
+          variants={sectionContainer}
           className="
             relative z-10
             mx-auto
