@@ -119,9 +119,9 @@ function Projects() {
       id="projects"
       className="
         relative overflow-hidden
-        pt-20 pb-24
+        pt-20 pb-14
         sm:pt-28 sm:pb-32
-        lg:pt-36 lg:pb-44
+        lg:pt-36 lg:pb-14
       "
     >
       {/* Title */}
