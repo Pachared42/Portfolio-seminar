@@ -6,6 +6,8 @@ import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
+import ImageShowcase from "./sections/ImageShowcase";
+import VideoShowcase from "./sections/VideoShowcase";
 import Education from "./sections/Education";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
@@ -38,6 +40,8 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <ImageShowcase/>
+        <VideoShowcase/>
         <Education />
         <Skills />
         <Contact />
