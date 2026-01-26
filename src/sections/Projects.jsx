@@ -121,7 +121,7 @@ function Projects() {
         relative overflow-hidden
         pt-20 pb-14
         sm:pt-28 sm:pb-32
-        lg:pt-36 lg:pb-14
+        lg:pt-36 lg:pb-24
       "
     >
       {/* Title */}
@@ -150,6 +150,7 @@ function Projects() {
           flex overflow-x-hidden
           cursor-grab active:cursor-grabbing
           select-none
+          border border-white/20 rounded-3xl
         "
       >
         {slides.map((project, index) => (
