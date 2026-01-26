@@ -31,13 +31,13 @@ function VideoShowcase() {
     };
 
     return (
-        <section className="relative pt-14 pb-44">
+        <section className="relative pt-24 pb-44">
             <motion.div
                 variants={container}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.4 }}
-                className="mx-auto max-w-7xl px-4 sm:px-8"
+                className="mx-auto max-w-7xl px-0 sm:px-8"
             >
                 {/* Title */}
                 <motion.h2
@@ -62,9 +62,10 @@ function VideoShowcase() {
                             whileHover="hover"
                             className="
                 group block overflow-hidden
-                rounded-2xl
+                rounded-3xl
                 bg-white/5
                 backdrop-blur
+                border border-white/20
               "
                         >
                             <motion.div variants={cardHover}>
