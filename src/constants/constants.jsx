@@ -89,6 +89,27 @@ export const PROJECTS = [
     },
 ];
 
+export const GALLERY_IMAGES = [
+    {
+        image: 'https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/cea1/live/1de105b0-f5a5-11ef-bcea-7b70a14a5556.jpg',
+        text: 'Ferrari',
+    },
+    {
+        image: 'https://img.redbull.com/images/c_crop,x_1061,y_0,h_3336,w_2502/c_fill,w_450,h_600/q_auto,f_auto/redbullcom/2022/9/11/obfipluskjdoagpqn2yj/max-verstappen-italian-grand-prix-2022',
+        text: 'Red Bull',
+    },
+    { image: 'https://picsum.photos/seed/3/800/600?grayscale', text: 'Waterfall' },
+    { image: 'https://picsum.photos/seed/4/800/600?grayscale', text: 'Strawberries' },
+    { image: 'https://picsum.photos/seed/5/800/600?grayscale', text: 'Deep Diving' },
+    { image: 'https://picsum.photos/seed/16/800/600?grayscale', text: 'Train Track' },
+    { image: 'https://picsum.photos/seed/17/800/600?grayscale', text: 'Santorini' },
+    { image: 'https://picsum.photos/seed/8/800/600?grayscale', text: 'Blurry Lights' },
+    { image: 'https://picsum.photos/seed/9/800/600?grayscale', text: 'New York' },
+    { image: 'https://picsum.photos/seed/10/800/600?grayscale', text: 'Good Boy' },
+    { image: 'https://picsum.photos/seed/21/800/600?grayscale', text: 'Coastline' },
+    { image: 'https://picsum.photos/seed/12/800/600?grayscale', text: 'Palm Trees' },
+];
+
 export const IMAGE_SHOWCASE = {
     title: "ผลงานการออกแบบกราฟิก",
     items: [
