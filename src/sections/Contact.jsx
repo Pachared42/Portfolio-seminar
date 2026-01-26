@@ -86,12 +86,10 @@ function Contact() {
                 <motion.h1
                     variants={fadeUp}
                     className="
-            text-center font-bold text-transparent
-            text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem]
-            [-webkit-text-stroke:0.75px_black]
-            sm:[-webkit-text-stroke:1px_black]
-            md:[-webkit-text-stroke:2px_black]
-            lg:[-webkit-text-stroke:3px_black]
+            text-center font-bold leading-none
+            text-transparent
+            text-[clamp(3rem,9vw,11rem)]
+            [-webkit-text-stroke:clamp(1px,0.2vw,3px)_black]
           "
                 >
                     CONTACT ME
