@@ -16,7 +16,7 @@ import Footer from "./sections/Footer";
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2,
+      duration: 3.5,
       easing: (t) => 1 - Math.pow(1 - t, 4),
       smoothWheel: true,
       smoothTouch: false,
