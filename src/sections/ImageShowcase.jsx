@@ -42,11 +42,11 @@ function ImageShowcase() {
                     {IMAGE_SHOWCASE.title}
                 </h2>
                 <CircularGallery
-                    bend={0}
+                    bend={0.3}
                     textColor="#ffffff"
                     borderRadius={0.05}
                     scrollEase={0.02}
-                    scrollSpeed={2}
+                    scrollSpeed={1}
                 />
             </motion.div>
         </section>
