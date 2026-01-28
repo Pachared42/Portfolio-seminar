@@ -124,8 +124,8 @@ function Skills() {
         <motion.div variants={fadeUp} className="mt-16 sm:mt-20">
           <h2
             className="
-              text-white font-semibold
-              mb-10
+              text-white font-semibold text-center
+              mb-15
               text-[clamp(1.5rem,3vw,1.875rem)]
             "
           >
@@ -138,8 +138,8 @@ function Skills() {
         <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
           <h2
             className="
-              text-white font-semibold
-              mb-10
+              text-white font-semibold text-center
+              mb-15
               text-[clamp(1.5rem,3vw,1.875rem)]
             "
           >
@@ -152,8 +152,8 @@ function Skills() {
         <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
           <h2
             className="
-              text-white font-semibold
-              mb-10
+              text-white font-semibold text-center
+              mb-15
               text-[clamp(1.5rem,3vw,1.875rem)]
             "
           >
@@ -166,8 +166,8 @@ function Skills() {
         <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
           <h2
             className="
-              text-white font-semibold
-              mb-10
+              text-white font-semibold text-center
+              mb-15
               text-[clamp(1.5rem,3vw,1.875rem)]
             "
           >
