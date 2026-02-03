@@ -90,7 +90,6 @@ function Projects() {
     startAutoPlay();
   };
 
-  /* animations */
   const slideFade = {
     hidden: { opacity: 0, scale: 0.97 },
     show: {
@@ -129,7 +128,7 @@ function Projects() {
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.4 }}
         className="
           text-center font-bold text-white
           mb-16 sm:mb-20
@@ -155,17 +154,19 @@ function Projects() {
       >
         {slides.map((project, index) => (
           <motion.div
-          key={project.id + "-" + index}
+            key={project.id + "-" + index}
             variants={slideFade}
             initial="hidden"
-            animate="show"
-            className="min-w-full px-4 sm:px-6 lg:px-10"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="min-w-full px-4 py-8 sm:px-6 lg:px-10"
           >
             <div className="mx-auto max-w-6xl">
               <motion.div
                 variants={contentStagger}
                 initial="hidden"
-                animate="show"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
                 className="
                   grid grid-cols-1
                   md:grid-cols-2
@@ -187,10 +188,7 @@ function Projects() {
                 />
 
                 {/* Content */}
-                <motion.div
-                  variants={fadeUp}
-                  className="text-white space-y-6"
-                >
+                <motion.div variants={fadeUp} className="text-white space-y-6">
                   <motion.h2
                     variants={fadeUp}
                     className="
