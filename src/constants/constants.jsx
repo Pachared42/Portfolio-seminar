@@ -69,7 +69,7 @@ export const PROJECTS = [
     title: "ระบบจัดการสต๊อกสินค้า",
     description:
       "ระบบจัดการสต๊อกสินค้าแบบครบวงจร รองรับการค้นหาและสแกนบาร์โค้ดแบบเรียลไทม์แสดงข้อมูลสินค้า คงเหลือ และประวัติการขายอย่างเป็นระบบออกแบบมาเพื่อเพิ่มความรวดเร็วและลดความผิดพลาดในการจัดการสินค้า",
-    image: "/image.Projects/Project1.jpeg",
+    image: "/image.Projects/Project1.png",
     techStack: ["React", "TailwindCSS", "Golang", "MySQL", "JWT"],
   },
   {
@@ -77,7 +77,7 @@ export const PROJECTS = [
     title: "ระบบแดชบอร์ดผู้ดูแลระบบ",
     description:
       "แดชบอร์ดสำหรับผู้ดูแลระบบ ใช้แสดงข้อมูลภาพรวมและสถิติสำคัญแบบเรียลไทม์รองรับการกำหนดสิทธิ์ผู้ใช้งานและการยืนยันตัวตนอย่างปลอดภัยออกแบบ UI ให้ใช้งานง่าย รองรับการแสดงผลทุกอุปกรณ์",
-    image: "/image.Projects/Project2.jpeg",
+    image: "/image.Projects/Project2.png",
     techStack: ["React", "MUI", "Golang", "REST API"],
   },
   {
@@ -85,7 +85,7 @@ export const PROJECTS = [
     title: "แพลตฟอร์มการเรียนรู้ออนไลน์",
     description:
       "แพลตฟอร์มการเรียนรู้ออนไลน์สำหรับจัดการบทเรียนและเนื้อหาแบบดิจิทัลรองรับระบบแบบฝึกหัด การติดตามความก้าวหน้า และสรุปผลการเรียนมุ่งเน้นประสบการณ์ผู้ใช้ที่เรียบง่ายและโต้ตอบได้อย่างลื่นไหล",
-    image: "/image.Projects/Project3.jpeg",
+    image: "/image.Projects/Project3.png",
     techStack: ["React", "TailwindCSS", "Framer Motion"],
   },
 ];
@@ -155,48 +155,52 @@ export const GALLERY_IMAGES = [
 
 export const IMAGE_SHOWCASE = {
   title: "ผลงานการออกแบบกราฟิก",
-  items: [
-    {
-      image: "/image.Projects/Project1.jpeg",
-      title: "โปสเตอร์งานเทศกาลดนตรี",
-      description: "ออกแบบโปสเตอร์สำหรับโปรโมตงานเทศกาลดนตรีท้องถิ่น",
-    },
-    {
-      image: "/image.Projects/Project2.jpeg",
-      title: "โลโก้แบรนด์เครื่องสำอาง",
-      description:
-        "สร้างสรรค์โลโก้ที่สะท้อนความงามและความเป็นเอกลักษณ์ของแบรนด์",
-    },
-    {
-      image: "/image.Projects/Project3.jpeg",
-      title: "แบนเนอร์โฆษณาออนไลน์",
-      description: "ออกแบบแบนเนอร์สำหรับแคมเปญโฆษณาบนโซเชียลมีเดีย",
-    },
-  ],
 };
 
 export const VIDEO_SHOWCASE = {
   title: "ผลงานวิดีโอโปรโมชัน",
   items: [
     {
-      thumbnail: "/image.Projects/Project1.jpeg",
-      link: "https://www.youtube.com/watch?v=PeF28qjw10Q&t=4s",
-      title: "วิดีโอแนะนำบริการ",
-      description:
-        "รวบรวมความคิดเห็นและรีวิวจากลูกค้าเพื่อนำเสนอความน่าเชื่อถือ",
-    },
-    {
-      thumbnail: "/image.Projects/Project2.jpeg",
+      thumbnail: "/image.videos/video1.jpg",
       link: "https://www.youtube.com/watch?v=yyyyy",
-      title: "วิดีโอแนะนำบริการ",
-      description: "ผลิตวิดีโอที่อธิบายและแสดงถึงประโยชน์ของบริการต่างๆ",
+      title: "วิดีโอแนะนำแบรนด์ (Brand Introduction)",
+      description:
+        "วิดีโอแนะนำภาพรวมของแบรนด์ สร้างการรับรู้และภาพลักษณ์ที่น่าเชื่อถือในเวลาอันสั้น",
     },
     {
-      thumbnail: "/image.Projects/Project3.jpeg",
-      link: "https://www.youtube.com/watch?v=zzzzz",
-      title: "วิดีโอรีวิวลูกค้า",
+      thumbnail: "/image.videos/video2.jpg",
+      link: "https://www.youtube.com/watch?v=yyyyy",
+      title: "วิดีโอโปรโมชันบริการ",
       description:
-        "รวบรวมความคิดเห็นและรีวิวจากลูกค้าเพื่อนำเสนอความน่าเชื่อถือ",
+        "นำเสนอจุดเด่นและประโยชน์ของบริการ เพื่อกระตุ้นความสนใจและการตัดสินใจของลูกค้า",
+    },
+    {
+      thumbnail: "/image.videos/video3.jpg",
+      link: "https://www.youtube.com/watch?v=yyyyy",
+      title: "วิดีโอรีวิวจากลูกค้า (Customer Review)",
+      description:
+        "รีวิวประสบการณ์จริงจากลูกค้า เพื่อเสริมความน่าเชื่อถือและสร้างความมั่นใจ",
+    },
+    {
+      thumbnail: "/image.videos/video4.jpg",
+      link: "https://www.youtube.com/watch?v=yyyyy",
+      title: "วิดีโอแนะนำสินค้า",
+      description:
+        "แสดงรายละเอียดสินค้า ฟังก์ชันการใช้งาน และจุดเด่นที่แตกต่างจากคู่แข่ง",
+    },
+    {
+      thumbnail: "/image.videos/video5.jpg",
+      link: "https://www.youtube.com/watch?v=yyyyy",
+      title: "วิดีโอคอนเทนต์สำหรับโซเชียลมีเดีย",
+      description:
+        "วิดีโอสั้น กระชับ เหมาะสำหรับ Facebook, Instagram และ TikTok",
+    },
+    {
+      thumbnail: "/image.videos/video6.jpg",
+      link: "https://www.youtube.com/watch?v=yyyyy",
+      title: "วิดีโอเบื้องหลังการทำงาน (Behind the Scenes)",
+      description:
+        "ถ่ายทอดบรรยากาศการทำงานจริง เพื่อสร้างความเป็นกันเองและความน่าเชื่อถือ",
     },
   ],
 };
