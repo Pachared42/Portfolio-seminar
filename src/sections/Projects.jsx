@@ -155,7 +155,7 @@ function Projects() {
       >
         {slides.map((project, index) => (
           <motion.div
-            key={`${project.id}-${index}`}
+          key={project.id + "-" + index}
             variants={slideFade}
             initial="hidden"
             animate="show"
