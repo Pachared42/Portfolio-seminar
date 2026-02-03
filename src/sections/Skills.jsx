@@ -121,7 +121,7 @@ function Skills() {
         </motion.h1>
 
         {/* Skills */}
-        <motion.div variants={fadeUp} className="mt-16 sm:mt-20">
+        <motion.div variants={fadeUp} className="mt-5">
           <h2
             className="
               text-white font-semibold text-center
@@ -135,7 +135,7 @@ function Skills() {
         </motion.div>
 
         {/* Tools */}
-        <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
+        <motion.div variants={fadeUp} className="mt-10">
           <h2
             className="
               text-white font-semibold text-center
@@ -149,7 +149,7 @@ function Skills() {
         </motion.div>
 
         {/* Databases */}
-        <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
+        <motion.div variants={fadeUp} className="mt-10">
           <h2
             className="
               text-white font-semibold text-center
@@ -163,7 +163,7 @@ function Skills() {
         </motion.div>
 
         {/* Clouds */}
-        <motion.div variants={fadeUp} className="mt-24 sm:mt-32">
+        <motion.div variants={fadeUp} className="mt-10">
           <h2
             className="
               text-white font-semibold text-center
