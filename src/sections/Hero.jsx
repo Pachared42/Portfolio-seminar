@@ -71,7 +71,7 @@ function Hero() {
       {/* Decorative Image */}
       <motion.img
         variants={imageItem}
-        src="image.decorative/unnamed.png"
+        src="image.Hero/Hero3.jpg"
         alt="decorative"
         className="
           absolute top-1/2 -translate-y-1/2
