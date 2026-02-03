@@ -1,5 +1,5 @@
 import { ABOUT } from "../constants/constants";
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 
 function About() {
   const sectionContainer = {
